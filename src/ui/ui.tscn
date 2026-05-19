@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://0x35yens6nj7"]
+
+[ext_resource type="Script" uid="uid://c17fcl1cof53c" path="res://src/ui/ui.gd" id="1_sp1ie"]
+
+[node name="UI" type="CanvasLayer" unique_id=1734023949]
+script = ExtResource("1_sp1ie")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1574078257]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -240.0
+offset_right = 519.0
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=543219876]
+layout_mode = 2
+
+[node name="FilterInput" type="LineEdit" parent="PanelContainer/VBoxContainer" unique_id=321987654]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Filter logs..."
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/VBoxContainer" unique_id=69042558]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LogContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/ScrollContainer" unique_id=620492927]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="." unique_id=1301984624]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -201.0
+offset_bottom = 50.0
+grow_horizontal = 0
+
+[node name="Stats" type="VBoxContainer" parent="PanelContainer2" unique_id=1365264219]
+layout_mode = 2
+
+[node name="SpawnedCountLabel" type="Label" parent="PanelContainer2/Stats" unique_id=407960117]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Currently Spawned: 0"
+
+[node name="CachedCountLabel" type="Label" parent="PanelContainer2/Stats" unique_id=985551290]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Currently Cached: 0"
